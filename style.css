@@ -1,0 +1,492 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal do header */
+.informacoes_contato { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, rgb(255, 192, 227), gold);
+    flex-wrap: wrap;
+}
+
+/* Estilo do nome da loja */
+.informacoes_contato span:first-child {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b5d33;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6); /* Sombra mais suave */
+    letter-spacing: 1px; /* Espaçamento nas letras para um efeito mais elegante */
+}
+
+/* Estilo para a barra de pesquisa */
+.barra_pesquisa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.barra_pesquisa input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 18px;
+    border: 1px solid #e0a800;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Transição suave ao focar no input */
+}
+
+.barra_pesquisa input:focus {
+    outline: none;
+    border-color: #8b5d33;
+    box-shadow: 0 0 8px rgba(139, 93, 51, 0.6); /* Sombra ao focar */
+}
+
+/* Estilo da imagem do logo */
+.imagem_logoo {
+    height: 80px;
+    margin-left: 1px;
+}
+
+/* Estilo para o contato */
+.informacoes_contato span:last-child {
+    font-size: 1rem;
+    color: #8b5d33;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo da imagem principal */
+.imagem {
+    position: relative;
+    width: 70%;
+    height: 500px; /* Ajuste a altura visível */
+    overflow: hidden; /* Garante que não haja transbordo */
+    left: 15%;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço mantendo proporções */
+    object-position: center; /* Centraliza a imagem */
+}
+
+.imagem .categoria {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 20px;
+}
+
+.imagem, p {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+.nome_categoria {
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5em; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno para afastar o texto da borda */
+    display: inline-block; /* Faz o texto ocupar somente o espaço necessário */
+    background: linear-gradient(to right, rgb(255, 241, 251), rgb(247, 247, 247)); /* Transição suave de rosa para dourado */
+    border-radius: 20px; /* Bordas arredondadas para efeito de nuvem */
+    position: relative;
+    left: 45%;
+}
+
+.produtos {
+    top: ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.produtos div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(179, 179, 179));
+    border-radius: 5px;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.produtos img {
+    width: 150px; /* Define a largura fixa */
+    height: 150px; /* Define a altura fixa */
+    object-fit: cover; /* Faz a imagem cobrir o espaço, cortando a parte que excede */
+    display: block; /* Remove espaçamento extra ao redor da imagem */
+    margin: auto; /* Centraliza a imagem */
+}
+
+.produtos, p {
+    color: #4b4b4b;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.produtos .botao {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: linear-gradient(to right, rgba(255, 217, 0, 0.8), rgb(255, 192, 231)); /* Transição suave de rosa para dourado */
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+/* Estilo de quantidade */
+.quantidade_diminiu, .quantidade, .quantidade_aumenta {
+    display: inline;
+    font-size: 15px;
+    border: none;
+}
+
+.quantidade_diminiu, .quantidade_aumenta {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+}
+
+/* Estilo do botão do carrinho */
+.cart-button {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(179, 179, 179));
+    color: rgb(0, 0, 0); /* Cor do texto e ícone */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Adiciona espaçamento ao botão */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto */
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+.cart-button:hover {
+    background: linear-gradient(to right, rgb(179, 179, 179), rgb(255, 255, 255));
+}
+
+.cart-button i {
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+/* Painel do carrinho */
+.cart-panel {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    height: 500px; /* Define a altura máxima do painel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    overflow-y: auto; /* Adiciona rolagem vertical */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.cart-panel button {
+    background-color: #f44336; /* Cor de fundo do botão Fechar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-panel button:hover {
+    background-color: #d32f2f; /* Cor do botão Fechar ao passar o mouse */
+}
+
+
+.finalizar {
+    background: linear-gradient(to right, rgb(43, 0, 255), rgb(0, 229, 255));; /* Cor do botão Fechar ao passar o mouse */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position:fixed;
+    left: 90%;
+    top: 200px
+   
+   
+}
+
+.finalizar:hover {
+    background: linear-gradient(to right, rgb(166, 0, 255), rgb(166, 83, 255));; /* Cor do botão Fechar ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+
+/* Container principal do header */
+.informacoes_contato { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 3px;
+    background: linear-gradient(to right, rgb(255, 192, 227), gold);
+    flex-wrap: wrap;
+}
+
+/* Estilo do nome da loja */
+.informacoes_contato span:first-child {
+    font-family: 'Great Vibes', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b5d33;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6); /* Sombra mais suave */
+    letter-spacing: 1px; /* Espaçamento nas letras para um efeito mais elegante */
+}
+
+/* Estilo para a barra de pesquisa */
+.barra_pesquisa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.barra_pesquisa input {
+    width: 80%;
+    max-width: 100px;
+    padding: 12px 18px;
+    border: 1px solid #e0a800;
+    border-radius: 25px;
+    font-size: 10px;
+    transition: all 0.3s ease; /* Transição suave ao focar no input */
+}
+
+.barra_pesquisa input:focus {
+    outline: none;
+    border-color: #8b5d33;
+    box-shadow: 0 0 8px rgba(139, 93, 51, 0.6); /* Sombra ao focar */
+}
+
+/* Estilo da imagem do logo */
+.imagem_logoo {
+    height: 30px;
+    margin-left: 1px;
+}
+
+/* Estilo para o contato */
+.informacoes_contato span:last-child {
+    font-size: 1rem;
+    color: #8b5d33;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo da imagem principal */
+.imagem {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Ajuste a altura visível */
+    overflow: hidden; /* Garante que não haja transbordo */
+    left: 0%;
+    top: 15px;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço mantendo proporções */
+    object-position: center; /* Centraliza a imagem */
+}
+
+.imagem .categoria {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    display:inline-block;
+    gap: 30px;
+}
+
+.imagem, p {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    top: 10px;
+}
+
+.produtos div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(179, 179, 179));
+    border-radius: 5px;
+    width: calc(80% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.produtos img {
+    width: 150px; /* Define a largura fixa */
+    height: 150px; /* Define a altura fixa */
+    object-fit: cover; /* Faz a imagem cobrir o espaço, cortando a parte que excede */
+    display: block; /* Remove espaçamento extra ao redor da imagem */
+    margin: auto; /* Centraliza a imagem */
+}
+
+.produtos, p {
+    color: #4b4b4b;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.produtos .botao {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: linear-gradient(to right, rgba(255, 217, 0, 0.8), rgb(255, 192, 231)); /* Transição suave de rosa para dourado */
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+/* Estilo de quantidade */
+.quantidade_diminiu, .quantidade, .quantidade_aumenta {
+    display: inline;
+    font-size: 15px;
+    border: none;
+}
+
+.quantidade_diminiu, .quantidade_aumenta {
+    background: linear-gradient(to right, pink, gold); /* Transição suave de rosa para dourado */
+}
+
+/* Estilo do botão do carrinho */
+.cart-button {
+    background: linear-gradient(to right, #ffffff, rgb(179, 179, 179));
+    color: rgb(0, 0, 0); /* Cor do texto e ícone */
+    border: none; /* Remove a borda */
+    padding: 10px 2px; /* Adiciona espaçamento ao botão */
+    font-size: 10px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto */
+    gap: 2px; /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s; /* Transição suave de cor */
+   
+}
+
+.cart-button:hover {
+    background: linear-gradient(to right, rgb(179, 179, 179), rgb(255, 255, 255));
+}
+
+.cart-button i {
+    font-size: 15px; /* Tamanho do ícone */
+}
+
+/* Painel do carrinho */
+.cart-panel {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    height: 500px; /* Define a altura máxima do painel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    overflow-y: auto; /* Adiciona rolagem vertical */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.cart-panel button {
+    background-color: #f44336; /* Cor de fundo do botão Fechar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-panel button:hover {
+    background-color: #d32f2f; /* Cor do botão Fechar ao passar o mouse */
+}
+
+
+.finalizar {
+    background: linear-gradient(to right, rgb(43, 0, 255), rgb(0, 229, 255));; /* Cor do botão Fechar ao passar o mouse */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position:fixed;
+    left: 70%;
+    top: 300px
+   
+   
+}
+
+
+.nome_categoria {
+    top: 14px;
+    left: 20%;
+}
+
+}

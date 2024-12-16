@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline doces e salgados</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="informacoes_contato"> 
+            <span>Receitas Bárbaras</span>
+            <img src="imagens/logo.png" alt="Logo da loja" class="imagem_logoo">
+            <div class="barra_pesquisa">
+                <input type="text" placeholder="Pesquise por produtos...">
+            </div>
+           
+            <button class="cart-button" onclick="togglePanel()">
+                <i class="fa fa-shopping-cart"></i> Carrinho
+                
+            </button>
+            
+            <!-- Painel que será exibido -->
+            <div id="cart-panel" class="cart-panel">
+                <h2>Seu Carrinho</h2>
+                <div id="cart-items"></div>
+                <button onclick="closePanel()">Fechar</button>
+            </div>
+            
+        
+            
+
+            
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="imagem">
+           
+            <img src="imagens/fundo_site.webp" alt="Fundo do site">
+
+            <div class="categoria">
+                <p id="link-doces-sobremesas">Doces e sobremesas</p>
+                <p id="link-salgados">Salgados e lanches</p>
+            </div>
+        </div>
+        
+
+        <div id="salgados" class="nome_categoria">
+            <p>categoria salgados</p>
+        </div>
+        <div id="produtos-container-salgados" class="produtos"></div>
+        
+        <div id="doces_sobremesas" class="nome_categoria">
+            <p>categoria doces</p>
+        </div>
+        <div id="produtos-container-doces_sobremesas" class="produtos"></div>
+        
+
+
+        <button class="finalizar" type="button" onclick="finalizarPedido()">Finalizar Pedido</button>   
+        
+    </main>
+    <footer style="text-align: center; padding: 10px;   background: linear-gradient(to right, rgb(179, 179, 179), rgb(255, 255, 255));">
+        © 2024 criado por MD prestações de serviços.
+    </footer>
+<script src="javascript.js"></script>
+</body>
+</html>
